@@ -1,0 +1,23 @@
+# from this site: https://iifx.dev/en/articles/140506
+# maar zie ook: https://stackoverflow.com/a/12021580
+# Waarom heeft Apple toch zo'n hekel aan ontwikkelaars?
+
+# Xcode
+build/
+*.build/
+DerivedData/
+*.xcworkspace/xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+.DS_Store
+*.swp
+*.lock
+.swiftpm/xcode/
+
+# CocoaPods
+Pods/
+!Pods/.gitignore # Except for the Pods/.gitignore itself
+
