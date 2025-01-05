@@ -8,20 +8,12 @@
 // https://developer.apple.com/documentation/swiftui/binding
 
 
-
-
 import SwiftUI
 import Combine
 
 struct ContentView: View {
     var body: some View {
-        return VStack {
-            Spacer()
-            ClockView()
-            Spacer()
-            ClockView()
-            Spacer()
-        }
+        return NewNetworkTestView(apiClient: APIClient())
     }
 }
 

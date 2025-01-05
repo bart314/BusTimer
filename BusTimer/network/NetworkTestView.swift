@@ -53,6 +53,7 @@ struct NewNetworkTestView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Button("Naar Groningen") {
                 isLoading = true
                 self.getData("Groningen")
