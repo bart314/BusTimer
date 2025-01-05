@@ -16,6 +16,7 @@
 		0510F6B32C4FC0EA00E784C3 /* CountDownTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510F6B22C4FC0EA00E784C3 /* CountDownTimer.swift */; };
 		0510F6B52C4FC15B00E784C3 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510F6B42C4FC15B00E784C3 /* ClockView.swift */; };
 		0510F6B72C511CB300E784C3 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0510F6B62C511CB300E784C3 /* HeaderView.swift */; };
+		053ED0CF2D2AD49600204C11 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 053ED0CE2D2AD49600204C11 /* SwiftSoup */; };
 		058FCBC52C524F630084605C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058FCBC42C524F630084605C /* TestView.swift */; };
 		05B400BA2C568EBE009BD8EE /* BusTijdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B400B92C568EBD009BD8EE /* BusTijdResponse.swift */; };
 		05B400BC2C5696A8009BD8EE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B400BB2C5696A8009BD8EE /* APIClient.swift */; };
@@ -44,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053ED0CF2D2AD49600204C11 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +156,9 @@
 				Base,
 			);
 			mainGroup = 0510F6922C4F80C700E784C3;
+			packageReferences = (
+				053ED0CD2D2AD49600204C11 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 0510F69C2C4F80C700E784C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -327,6 +332,7 @@
 				DEVELOPMENT_TEAM = 2BR8G26827;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -356,6 +362,7 @@
 				DEVELOPMENT_TEAM = 2BR8G26827;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -396,6 +403,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		053ED0CD2D2AD49600204C11 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		053ED0CE2D2AD49600204C11 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 053ED0CD2D2AD49600204C11 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0510F6932C4F80C700E784C3 /* Project object */;
 }
