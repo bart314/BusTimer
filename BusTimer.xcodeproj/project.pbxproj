@@ -93,6 +93,7 @@
 		0510F6B82C522BD200E784C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				05B400BE2C56986F009BD8EE /* NetworkTestView.swift */,
 				0510F6A02C4F80C700E784C3 /* ContentView.swift */,
 				0510F6AE2C4FC08500E784C3 /* Clock.swift */,
 				0510F6B42C4FC15B00E784C3 /* ClockView.swift */,
@@ -107,7 +108,6 @@
 			children = (
 				05B400BB2C5696A8009BD8EE /* APIClient.swift */,
 				05B400B92C568EBD009BD8EE /* BusTijdResponse.swift */,
-				05B400BE2C56986F009BD8EE /* NetworkTestView.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";

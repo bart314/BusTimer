@@ -8,51 +8,15 @@
 import SwiftUI
 
 struct NetworkTestView: View {
-    @State private var apiResponse: [BusTijdResponse] = []
-    @State private var errorMessage: String?
-    
-    let apiClient: APIClient
-
-    var body: some View {
-        VStack {
-            if !apiResponse.isEmpty {
-                List(apiResponse, id: \.halte) { item in
-                    VStack(alignment: .leading) {
-                        let foo:TimeInterval = item.tijden[0]
-                        Text("Halte: \(item.halte)")
-                        Text("Tijden: \(item.tijden)")
-                    }
-                }
-            } else if let errorMessage = errorMessage {
-                Text("Error: \(errorMessage)")
-            } else {
-                Text("Loading...")
-            }
-        }
-        .task {
-            await fetchData()
-        }
-    }
-    
-    func fetchData() async {
-        do {
-            apiResponse = try await apiClient.fetchData()
-        } catch {
-            errorMessage = error.localizedDescription
-        }
-    }
-}
-
-
-struct NewNetworkTestView: View {
-    @State var groningen:[String] = ["Henk", "Karel"]
-    @State var garrelsweer:[String] = ["Pieter", "Chantal"]
+    @State var groningen:[String] = [""]
+    @State var garrelsweer:[String] = [""]
     @State var isLoading:Bool = false
     
     let apiClient: APIClient
     
     var body: some View {
         VStack {
+            HeaderView()
             Spacer()
             Button("Naar Groningen") {
                 isLoading = true
@@ -93,5 +57,5 @@ struct NewNetworkTestView: View {
 }
 
 #Preview {
-    NewNetworkTestView(apiClient: APIClient() )
+    NetworkTestView(apiClient: APIClient() )
 }

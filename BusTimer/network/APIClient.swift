@@ -68,11 +68,14 @@ class APIClient: ObservableObject {
             let p: Elements = try doc.select("a.list-group-item")
             var rv:[String] = []
             for j in p {
-                // formaat: 18:03 6 Groningen Q-link • Qbuzz
-                
-                let tmp = try! j.text().split(separator: " ")
-                if self.target == "Groningen" && tmp[2] == "Groningen" { rv.append(String(tmp[0])) }
-                else if self.target == "Garrelsweer" && tmp[2] == "Delfzijl" { rv.append(String(tmp[0])) }
+                let line = try j.select("div.ott-linecode").text()
+                if line == "6" {
+                    let time = try j.select("div.ott-departure-time").text()
+                    let dest = try j.select("div.ott-destination").text()
+                    
+                    if self.target == "Groningen" && dest == "Groningen" { rv.append(String(time)) }
+                    else if self.target == "Garrelsweer" && dest == "Delfzijl" { rv.append(String(time)) }
+                }
             }
             
             return rv

@@ -12,7 +12,7 @@ struct HeaderView: View {
     
     var body: some View {
         return HStack {
-            Text("Hello, World!").font(.title)
+            Text("BusTimer").font(.title)
             Spacer()
             Button (action: { Task { await timer.refesh()} }) { Label("Refresh", systemImage: "arrow.clockwise")
             }.font(.title).labelStyle(.iconOnly)
